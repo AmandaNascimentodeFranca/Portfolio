@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Gooogle fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--Fim google fonts-->
+
+    <title>Portfólio ANF</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        img{ /*Estilo geral*/
+           height: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--DIVIDIR CABEÇALHO 3 PARTES-->
+    <header>
+        <!--Limites da página-->
+        <div class="interface">
+            <div id="11" class="logo">
+                <!--Voltar ao início-->
+                <a href="#10">
+                    <!--Ctrl space para acessar a img-->
+                    <img src="Images/Portfólio.png" alt="Logo do Portfólio ANF">
+                </a>
+            </div>
+
+            <!--Criar menu-->
+            <nav class="menu-desktop">
+                <ul>
+                    <!--Listas dos links do menu-->
+                    <li><a href="#11">Início</a></li>
+                    <li><a href="#12">Formação</a></li>
+                    <li><a href="#13">Portfólio</a></li>
+                    <li><a href="#14">Sobre</a></li>
+                </ul>
+            </nav>
+
+            <!--Botão contato-->
+            <div class="btn-contato">
+                <a href="#15">
+                    <button>Contato</button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main> <!--Guarda o conteúdo principal do site (uma tag main por página)-->
+        <section class="topo-do-site">
+            <div class="interface"> <!--Elementos do topo do site-->
+                <div class="flex">
+                    <div class="txt-topo-site"> <!--Elementos lado esquerdo-->
+                        <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL<span>.</span></h1> <!--Ponto com cor específica-->
+                        <p>Criatividade e inovação andam lado a lado. Com uma combinação única de design impactante, funcionalidade intuitiva e otimização para resultados, estou pronta para criar a presença online dos seus sonhos.</p>
+                        <div class="btn-contato"> <!--Mesma classe utilizada button-->
+                            <a href="#15">
+                                <button>Entre em contato</button>
+                            </a>
+                        </div>
+                    </div> <!--Fim lado esquerdo-->
+
+                    <div class="img-topo-site"> <!--Imagem lado direito-->
+                        <img src="Images/bluejelly-removebg-preview.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="12" class="formação">
+            <div class="interface">
+                <h2 class="titulo">MINHAS <span>FORMAÇÕES.</span></h2>
+                <br>
+                <div class="flex">
+                    <div class="formação-box"> <!--Elementos dentro caixas-->
+                        <h3>Idiomas</h3>
+                        <p>Inglês nível intermediário</p>
+
+                        <h3>Pacote Office</h3>
+                        <p>Word avançado, Excel intermediário, Power Point intermediário</p>
+
+                        <h3>Análise de informática</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="14" class="Sobre">
+            <div class="interface">
+                <div class="flex"> <!--Alinhamento um do lado do outro-->
+                    <div class="img-sobre">
+                        <img src="Images/miki.jpg" alt="">
+                    </div>
+
+                    <div class="txt-sobre">
+                        <h2>MUITO PRAZER, <span>SOU KIRA MIKI.</span></h2>
+                        <h3>Sobre mim:</h3>
+                        <p>Gosto de explorar o desconhecido, ganhando percepções mais profundas.
+                            Não costumo ter intenções negativas e manipuladoras com as pessoas.
+                            Não perco a fé em pessoas que vejo um potencial.</p>
+                        
+                        <h3>Hobbies:</h3>
+                        <p>Aprender e ler.</p>
+                        <p>Explorar a natureza.</p>
+                        <p>Assistir.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="13" class="Portfolio">
+            <div class="interface">
+                <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
+                <div class="flex">
+                    <div class="img-port" style="background-image: url(Images/galaxy.jpg);">
+                        <div class="overlay">Projeto 1</div>        
+                    </div>
+                    <div class="img-port" style="background-image: url(Images/bluestars.jpg);">
+                        <div class="overlay">Projeto 2</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(Images/night.jpg);">
+                        <div class="overlay">Projeto 3</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="15" class="formulario">
+            <div class="interface">
+                <h2 class="titulo">FALA <span>COMIGO.</span></h2>
+
+                <form action="">
+                    <input type="text" placeholder="Seu nome completo:" required> <!--Fundo texto invisivel (obrigatório)-->
+                    <input type="text" placeholder="Seu e-mail:" required> 
+                    <input type="text" placeholder="Seu celular:">
+                    <textarea name="" id="" placeholder="Sua mensagem:" required></textarea>
+                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div> <!--Botão enviar formulário-->
+                </form>
+            </div>
+        </section>
+
+        <!--Opcional-->
+        <footer>
+            <div class="interface"> <!--Classe padrão-->
+                    <div class="logo-footer">
+                        <img src="Images/Portfólio.png" alt="Logotipo Portfolio ANF">
+                    </div> 
+            </di>
+        </footer>
+    </main>
+</body>
+</html>
