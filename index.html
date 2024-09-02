@@ -14,8 +14,300 @@
     <!--<link rel="stylesheet" href="style.css">-->
 
    <style>
-    img{ /*Estilo geral*/
-           height: 180px;
+        img{ /*Estilo geral*/
+               height: 180px;
+            }
+
+        /*ESTILO GERAL*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /*Google fonts*/
+            font-family: "Poppins", sans-serif;
+            /*Fim Google fonts*/
+        }
+        
+        body{
+            background-color: black;
+            height: 100vh;
+        }
+        
+        .interface{ /*Limites da página*/
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .flex{
+            display: flex;
+        }
+        
+        .btn-contato button{
+            padding: 10px 40px;
+            font-size: 18px;
+            font-weight: 600; 
+            background-color: cornflowerblue;
+            border: 0;
+            border-radius: 30px; /*Arredondar*/
+            cursor: pointer;
+            transition: .2s;
+        }
+        
+        h2.titulo{
+            color: rgb(167, 181, 206);
+            font-size: 34px;
+            text-align: center;
+        }
+        
+        h2.titulo span{
+            color: cornflowerblue;
+        }
+        
+        button:hover, form .btn-enviar input:hover{
+            box-shadow: 0px 0px 8px cornflowerblue;
+            transform: scale(1.05);
+        }
+        
+        /*CABEÇALHO*/
+        header{
+            padding: 40px 4%;  /*Distanciado*/
+        }
+        
+        /*UM DO LADO DO OUTRO*/
+        header > .interface{
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /*Max possível distante um do outro*/
+        }
+        
+        header a{ /*Chamar todos os links dentro*/
+            color: rgb(77, 93, 121);
+            text-decoration: none; /*Remover linha dos links*/
+            display: inline-block;
+            transition: .2s;
+        }
+        
+        header a:hover{ /*Cursor efeito*/
+            color: rgb(136, 174, 243);
+            transform: scale(1.05); /*Só funciona para itens block level (link são inline level*/
+        
+        }
+        
+        header nav ul{ /*Remover lista*/
+            list-style-type: none;
+        }
+        
+        header nav ul li{
+            display: inline-block; /*Linha reta*/
+            padding: 0 40px; /*Espaçamento entre os links*/
+        }
+        
+        .btn-contato button:hover{
+            box-shadow: 0px 0px 8px rgb(100, 148, 237);
+            transform: scale(1.05);
+        }
+        
+        /*TOPO DO SITE*/
+        section.topo-do-site{
+            padding: 40px 4%;
+        }
+        
+        section.topo-do-site .flex{ /*Estilização exclusiva*/
+            align-items: center;
+            justify-content: center;
+            gap: 90px;
+        }
+        
+        .topo-do-site h1{
+            color: rgb(167, 181, 206);
+            font-size: 42px;
+            line-height: 40px; /*Sem espaçamento entre o txt*/
+        }
+        
+        .topo-do-site .txt-topo-site h1 span{
+            color: cornflowerblue
+        }
+        
+        .topo-do-site .txt-topo-site p{
+            color: rgb(167, 181, 206);
+            margin: 40px 0px;
+        }
+        
+        .topo-do-site .img-topo-site img{
+            height: 300px;
+            position: relative;
+            animation: flutuar 2s ease-in-out infinite alternate; /*Ficar suave, rápida e terminar suave*/
+        }
+        
+        @keyframes flutuar{
+            0%{
+                top: 0;
+            }
+            100%{
+                top: 30px;
+            }
+        }
+        
+        /*ESTILO DAS FORMAÇÕES*/
+        section.formação{
+            padding: 40px 4%;
+        }
+        
+        .formação .formação-box{
+            color: rgb(167, 181, 206);
+            padding: 40px;
+            border-radius: 20px; /*Arredondar borda caixa*/
+            border: 2px solid rgb(167, 181, 206);
+            margin-top: 45px;
+            transition: .2s;
+        }
+        
+        .formação .formação-box:hover{
+            transform: scale(1.05);
+            box-shadow: 0 0 8px rgba(100, 148, 237, 0.562);
+        }
+        
+        .formação .formação-box h3{
+            font-size: 28px;
+            margin: 10px 0;
+        }
+        
+        /*ESTILO SOBRE*/
+        .img-sobre img{
+            height: 380px;
+        }
+        
+        section.Sobre{
+            padding: 80px 4%; /*Não colar nas laterais*/
+        }
+        
+        section.Sobre .flex{
+            align-items: center;
+            gap: 60px;
+        }
+        
+        .Sobre .txt-sobre{
+            color: rgb(167, 181, 206);
+        }
+        
+        .Sobre .txt-sobre h2{
+            font-size: 40px;
+            line-height: 40px; /*Texto sem espaço*/
+            margin-bottom: 30px;
+        }
+        /*Span elemento inline level (fica na mesma linha)*/
+        .Sobre .txt-sobre h2 span{
+            color: cornflowerblue;
+            display: block; /*Block level (linha de baixo)*/
+        }
+        
+        .Sobre .txt-sobre p{
+            margin: 10px 0;
+            text-align: justify;
+        }
+        
+        /*ESTILO DO PORTFÓLIO*/
+        section.Portfolio{
+            padding: 80px 4%;
+            box-shadow: 0 0 40px 10px rgba(100, 148, 237, 0.123);
+        }
+        
+        section.Portfolio .flex{
+            justify-content: space-around; /*Já deixa tudo espaçado*/
+            margin-top: 60px;
+        }
+        
+        .img-port{
+            width: 360px;
+            height: 460px;
+            background-color: cornflowerblue;
+            background-size: cover; 
+            background-position: 100% 0%; /*Efeito de rolagem*/
+            transition: 8s;
+            cursor: pointer;
+            border-radius: 40px;
+            position: relative;
+        }
+        
+        .img-port:hover{
+            background-position: 100% 100%;
+        }
+        
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(100, 148, 237, 0.315);
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 600;
+            color: rgb(167, 181, 206);
+            opacity: 0; /*overlay some*/
+            transition: .5s;
+        }
+        
+        .overlay:hover{
+            opacity: 1;
+        }
+        
+        /*ESTILO DO FORMULÁRIO DE CONTATO*/
+        section.formulario{
+            padding: 80px 4%;
+        }
+        
+        form{
+            max-width: 500px; /*Independente do tamanho da tela, não irá ultrapassar*/
+            margin: 0 auto; /*Centralizado*/
+            display: flex;
+            justify-content: center;
+            flex-direction: column; /*Elementos em coluna*/
+            gap: 10px;
+            margin-top: 40px;
+        }
+        
+        form input, form textarea{
+            width: 100%;
+            color: rgb(167, 181, 206);
+            background-color: rgba(39, 39, 39, 0.596);
+            border: 0;
+            outline: 0;
+            padding: 20px 15px;
+            border-radius: 15px;
+            font-size: 16px;
+        }
+        
+        form input::placeholder{
+            color: rgb(176, 197, 235)
+        }
+        
+        form textarea{
+            resize: none;
+            max-height: 200px;
+        }
+        
+        form .btn-enviar{
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        form .btn-enviar input{
+            width: 120px;
+            background-color: cornflowerblue;
+            color: black;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .2s;
+        }
+        
+        /*ESTILO RODAPÉ*/
+        footer{
+            padding: 40px 4%;
+            box-shadow: 0 0 40px 10px rgba(100, 148, 237, 0.123);
         }
    </style>
 
